@@ -35,7 +35,13 @@ namespace SimpleApp
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc()
+                .AddRazorPagesOptions(options =>
+                {
+                    options.Conventions.AuthorizeFolder("/Account/Manage");
+                    options.Conventions.AuthorizePage("/Account/Logout");
+                })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
         }
 
