@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using SimpleApp.Areas.Identity.Data;
+using SimpleApp.Models;
 
 namespace SimpleApp.Areas.Identity.Pages.Account
 {
@@ -20,17 +21,23 @@ namespace SimpleApp.Areas.Identity.Pages.Account
         private readonly UserManager<SimpleAppUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly AppDbContext _db;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
         public RegisterModel(
             UserManager<SimpleAppUser> userManager,
             SignInManager<SimpleAppUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            RoleManager<IdentityRole> roleManager,
+            AppDbContext db)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _db = db;
+            _roleManager = roleManager;
         }
 
         [BindProperty]

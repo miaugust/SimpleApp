@@ -19,7 +19,7 @@ namespace SimpleApp.Areas.Identity
                 services.AddDbContext<AppDbContext>(options =>
                     options.UseMySql(context.Configuration.GetConnectionString("MySql")));
 
-                services.AddDefaultIdentity<SimpleAppUser>()
+                services.AddDefaultIdentity<SimpleAppUser>().AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<AppDbContext>();
             });
         }
