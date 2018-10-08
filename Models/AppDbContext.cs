@@ -4,8 +4,9 @@ using SimpleApp.Areas.Identity.Data;
 
 namespace SimpleApp.Models
 {
-    public class AppDbContext : IdentityDbContext<SimpleAppUser>
+    public partial class AppDbContext : IdentityDbContext<SimpleAppUser>
     {
+        public DbSet<Employee> Employees { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
         {

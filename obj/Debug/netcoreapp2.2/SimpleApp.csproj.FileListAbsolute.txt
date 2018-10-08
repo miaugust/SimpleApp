@@ -39,3 +39,8 @@ C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Are
 C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Pages\Employees\Create.g.cshtml.cs
+C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Pages\Employees\Delete.g.cshtml.cs
+C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Pages\Employees\Details.g.cshtml.cs
+C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Pages\Employees\Edit.g.cshtml.cs
+C:\Users\maugustynski\Documents\code\SimpleApp\obj\Debug\netcoreapp2.2\Razor\Pages\Employees\Index.g.cshtml.cs

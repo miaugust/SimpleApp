@@ -9,8 +9,8 @@ using SimpleApp.Models;
 namespace SimpleApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20181005122937_initial")]
-    partial class initial
+    [Migration("20181008082727_empl")]
+    partial class empl
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -187,6 +187,18 @@ namespace SimpleApp.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("SimpleApp.Models.Employee", b =>
+                {
+                    b.Property<string>("ControllNumber")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("FirstName");
+
+                    b.HasKey("ControllNumber");
+
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
