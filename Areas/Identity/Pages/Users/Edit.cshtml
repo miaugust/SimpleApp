@@ -1,0 +1,123 @@
+@page
+@model SimpleApp.Areas.Identity.Pages.Users.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>SimpleAppUser</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.FirstName" class="control-label"></label>
+                <input asp-for="SimpleAppUser.FirstName" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.LastName" class="control-label"></label>
+                <input asp-for="SimpleAppUser.LastName" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.Division" class="control-label"></label>
+                <input asp-for="SimpleAppUser.Division" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.Division" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="SimpleAppUser.Id" />
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.UserName" class="control-label"></label>
+                <input asp-for="SimpleAppUser.UserName" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.NormalizedUserName" class="control-label"></label>
+                <input asp-for="SimpleAppUser.NormalizedUserName" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.NormalizedUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.Email" class="control-label"></label>
+                <input asp-for="SimpleAppUser.Email" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.NormalizedEmail" class="control-label"></label>
+                <input asp-for="SimpleAppUser.NormalizedEmail" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.NormalizedEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="SimpleAppUser.EmailConfirmed" /> EmailConfirmed
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.PasswordHash" class="control-label"></label>
+                <input asp-for="SimpleAppUser.PasswordHash" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.PasswordHash" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.SecurityStamp" class="control-label"></label>
+                <input asp-for="SimpleAppUser.SecurityStamp" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.SecurityStamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.ConcurrencyStamp" class="control-label"></label>
+                <input asp-for="SimpleAppUser.ConcurrencyStamp" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.ConcurrencyStamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.PhoneNumber" class="control-label"></label>
+                <input asp-for="SimpleAppUser.PhoneNumber" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="SimpleAppUser.PhoneNumberConfirmed" /> PhoneNumberConfirmed
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="SimpleAppUser.TwoFactorEnabled" />TwoFactorEnabled
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.LockoutEnd" class="control-label"></label>
+                <input asp-for="SimpleAppUser.LockoutEnd" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.LockoutEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="SimpleAppUser.LockoutEnabled" /> LockoutEnabled
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="SimpleAppUser.AccessFailedCount" class="control-label"></label>
+                <input asp-for="SimpleAppUser.AccessFailedCount" class="form-control" />
+                <span asp-validation-for="SimpleAppUser.AccessFailedCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

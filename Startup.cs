@@ -43,6 +43,9 @@ namespace SimpleApp
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddDbContext<userContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("userContext")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,70 @@
+@page
+@model SimpleApp.Areas.Identity.Pages.Users.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SimpleAppUser[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SimpleAppUser[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SimpleAppUser[0].Division)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SimpleAppUser[0].UserName)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.SimpleAppUser[0].EmailConfirmed)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.SimpleAppUser[0].PhoneNumber)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SimpleAppUser) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Division)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailConfirmed)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a>
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

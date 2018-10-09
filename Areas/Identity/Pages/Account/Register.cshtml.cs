@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using SimpleApp.Areas.Identity.Data;
 using SimpleApp.Models;
 using SimpleApp.Data;
+using System.Linq;
 
 namespace SimpleApp.Areas.Identity.Pages.Account
 {
@@ -107,8 +108,9 @@ namespace SimpleApp.Areas.Identity.Pages.Account
                     {
                         await _roleManager.CreateAsync(new IdentityRole(SD.User));
                     } 
-                    var superAdmins = (await _userManager.GetUsersInRoleAsync(SD.SuperAdmin)); 
-                    if(superAdmins.Count == 0)
+                    //var superAdmins = (await _userManager.GetUsersInRoleAsync(SD.SuperAdmin)); 
+                    
+                    if(_db.Users.Count() == 1)
                     {
                         await _userManager.AddToRoleAsync(user, SD.SuperAdmin);
                     }

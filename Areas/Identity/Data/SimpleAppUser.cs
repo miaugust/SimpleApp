@@ -11,6 +11,7 @@ namespace SimpleApp.Areas.Identity.Data
     public class SimpleAppUser : IdentityUser
     {   
         [Required]
+        [Display(Name = "Imię")]
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
